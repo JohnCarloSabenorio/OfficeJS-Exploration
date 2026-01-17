@@ -12,7 +12,11 @@ export default function Results({ presentationErrors }: { presentationErrors: an
       <div className="h-full w-full flex flex-col gap-3 py-3">
         {presentationErrors != null &&
           Object.keys(presentationErrors).map((slideNumber, idx) => {
-            if (presentationErrors[slideNumber])
+            if (
+              presentationErrors[slideNumber].textDensityErrors.length != 0 ||
+              presentationErrors[slideNumber].textDensityWarnings.length != 0 ||
+              presentationErrors[slideNumber].fontNameErrors.length != 0
+            )
               return (
                 <Slide
                   key={idx}
