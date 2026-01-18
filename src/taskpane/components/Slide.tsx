@@ -12,7 +12,7 @@ export default function Slide({
 
       {(slideProblems.textDensityWarnings.length != 0 ||
         slideProblems.textDensityErrors.length != 0) && (
-        <h1 className="text-3xl mt-3">Text Density</h1>
+        <h1 className="text-3xl mt-3">Character Density</h1>
       )}
 
       {/* Text Density Warnings */}
